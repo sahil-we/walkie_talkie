@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setup</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h2>Profile Setup</h2>
+    <form id="profileForm" enctype="multipart/form-data">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+        <button type="submit">Submit Profile</button>
+    </form>
+
+    <script>
+        document.getElementById("profileForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(document.getElementById("profileForm"));
+
+            try {
+                const response = await fetch("/setup-profile", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    window.location.href = "/dashboard.html"; // Redirect after successful profile setup
+                } else {
+                    alert("Failed to update profile. Try again.");
+                }
+            } catch (error) {
+                console.error("Error submitting profile:", error);
+            }
+        });
+    </script>
+</body>
+</html>

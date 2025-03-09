@@ -1,0 +1,97 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        #welcomeScreen {
+            text-align: center;
+        }
+
+        #loginForm {
+           
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        #loginForm h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #loginForm input, #loginForm button {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        #loginForm button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #loginForm button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        #profileForm {
+          
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        #profileForm h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #profileForm input, #profileForm select, #profileForm button {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        #walkieTalkieApp {
+           
+            text-align: center;
+        }
+
+        #walkieTalkieApp input, #walkieTalkieApp button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+            border: none;
+        }
+        #walkieTalkieApp button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            cursor: pointer;
+        }
+        #walkieTalkieApp input {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+ 
