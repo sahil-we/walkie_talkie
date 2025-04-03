@@ -30,6 +30,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 const users = {}; // Stores online users: { userPin: socketId }
 
 const db = mysql.createConnection({
@@ -107,7 +108,13 @@ passport.deserializeUser((id, done) => {
 });
 
 // **Google OAuth Routes**
-app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email"] }));
+app.get(
+    "/auth/google",
+    passport.authenticate("google", {
+        scope: ["openid", "profile", "email"]
+    })
+);
+
 
 app.get("/auth/google/callback", passport.authenticate("google", { failureRedirect: "/" }), (req, res) => {
     req.session.newUser = req.user.newUser || false;
