@@ -108,7 +108,10 @@ passport.deserializeUser((id, done) => {
 });
 
 // **Google OAuth Routes**
-app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email"] }));
+app.get("/auth/google", passport.authenticate("google", { 
+    scope: ["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email"] 
+}));
+
 
 app.get("/auth/google/callback", passport.authenticate("google", { failureRedirect: "/" }), (req, res) => {
     req.session.newUser = req.user.newUser || false;
