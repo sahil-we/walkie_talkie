@@ -63,6 +63,7 @@ passport.use(
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             callbackURL: "https://walkie-talkie-1.onrender.com/auth/google/callback",
+            scope: ["profile", "email"],
         },
         (accessToken, refreshToken, profile, done) => {
             db.query("SELECT * FROM users WHERE google_id = ?", [profile.id], (err, results) => {
