@@ -1,1 +1,22 @@
-{}
+{
+  "name": "Albedo",
+  "short_name": "Albedo",
+  "description": "Albedo is a responsive and fast web app designed to enhance real-time communication through walkie-talkie-style interactions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon_albedo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon_albedo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
