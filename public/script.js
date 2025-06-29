@@ -1,5 +1,5 @@
 document.getElementById("googleLogin").addEventListener("click", () => {
-  window.location.href = "https://walkie-talkie-xxep.onrender.com/auth/google/callback";
+  window.location.href = "https://walkie-talkie-xxep.onrender.com/auth/google";
 });
 
 document.getElementById("emailSignup").addEventListener("click", async () => {
@@ -21,7 +21,7 @@ document.getElementById("emailLogin").addEventListener("click", async () => {
   const password = document.getElementById("password").value;
 
   const response = await fetch("https://walkie-talkie-xxep.onrender.com/login", {
-      method: "POST",
+      method: "POST", 
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
   });
